@@ -73,6 +73,7 @@ $(".myButton").click(function (e) {
 });
 
 $(".btn").click(function (e) {
+  if (!started) return;
   const usrChosColor = e.target.id;
   usrClickPattern.push(usrChosColor);
   if (started) {
