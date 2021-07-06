@@ -50,6 +50,8 @@ function checkAnswer(curLevel) {
       $("body").removeClass("game-over");
     }, 200);
     $("#level-title").text("Game Over😜,Press Any Key to Restart");
+    $(".myButton").text("or Click Me to Restart!!");
+    $(".myButton").removeClass("hidden");
     startOver();
   }
 }
@@ -58,6 +60,15 @@ $(document).keydown(function (e) {
   if (!started) {
     nextSequence();
     started = true;
+    $(".myButton").addClass("hidden");
+  }
+});
+
+$(".myButton").click(function (e) {
+  if (!started) {
+    nextSequence();
+    started = true;
+    $(".myButton").addClass("hidden");
   }
 });
 
